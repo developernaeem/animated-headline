@@ -1,0 +1,156 @@
+* {
+	margin: 0;
+	padding: 0;
+	font-family: sans-serif;
+}
+
+.header {
+	height: 70px;
+	background-color: gray;
+	padding: 0px 20px;
+}
+
+/* === Logo === */
+span.logo {
+	float: left;
+	line-height: 70px;
+	font-size: 18px;
+	color: #fff;
+	font-weight: bold;
+}
+span.logo a img{
+	
+}
+/* ==== main-menu ==== */
+.menu {
+	margin: 0;
+	padding: 0;
+	display: flex;
+	float: right;
+	line-height: 70px;
+}
+
+.menu li {
+	list-style-type: none;
+	position: relative;
+}
+
+.menu li a {
+	color: #fff;
+	padding: 0px 20px;
+	display: block;
+	text-decoration: none;
+	-webkit-transition: .1s ease-in-out;
+}
+
+.menu li a:hover {
+	background-color: red;
+	color: #fff;
+}
+
+/* ==== Hide-show-icon ==== */
+.show-menu-btn,
+.hide-menu-btn {
+	transition: 0.4s;
+	font-size: 30px;
+	cursor: pointer;
+	display: none;
+}
+.menu a:hover,
+.show-menu-btn,
+.hide-menu-btn {
+	color: #fff;
+}
+.show-menu-btn {
+	float: right;
+}
+.show-menu-btn i {
+	line-height: 70px;
+}
+
+
+
+/* Banner Section Area Css */
+.banner_area{
+	background-image: url('../../assets/img/1.jpg');
+	height: 550px;
+	background-size: cover;
+	background-position: center;
+	color: #fff;
+	text-align: center;
+	position: center;
+}
+.banner_area:before{
+	content: "";
+	position: absolute;
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	background-color: rgba(0,0,0,0.6);
+}
+.banner_heading{
+	margin-top: 230px;
+}
+.cd-headline{
+	font-size: 40px;
+	color: #fff;
+}
+.cd-words-wrapper{
+	color: #69DE6B;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* Responsive Code */
+@media screen and (max-width:768px) {
+
+	.show-menu-btn,
+	.hide-menu-btn {
+		display: block;
+	}
+
+	/* === menu === */
+	.menu {
+		position: fixed;
+		width: 50%;
+		height: 100vh;
+		background-color: #333;
+		text-align: center;
+		padding: 80px 0px;
+		line-height: normal;
+		transition: 0.7s;
+		left: -100%;
+		display: block;
+		top: 0;
+	}
+
+	.menu.active {
+		left: 0;
+	}
+
+	.menu li a {
+		padding: 20px 0px;
+	}
+
+	/* == menu-hide-icon == */
+	.hide-menu-btn {
+		position: absolute;
+		top: -50px;
+		right: 40px;
+		overflow: hidden;
+	}
+
+}
